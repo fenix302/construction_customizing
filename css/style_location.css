@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "GyeonggiBatang";
+    color: #333333;
+}
+
+body{
+    width: 1000px;
+    background-color: #ffffff;
+    font-size: 20px;
+    /* border: 1px solid red; */
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+
+/* 레이어 팝업창(#modal) 배경 스타일 적용 */
+#modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: none;
+}
+
+#modal.active{
+    display: block;
+}
+
+/* 레이어 팝업창 스타일 적용 */
+.modal_up{
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    left: 30%;
+    top: 20%;
+    background-color: #ffffff;
+}
+
+.uptitle{
+    margin-top: 30px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.upbody{
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.closeWrap{
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 16px;
+}
+.btn{
+    margin-left: 20px;
+    cursor: pointer;
+    height: 25px;
+    width: 80px;
+    background: #fabd43;
+    border: 1px solid #fabd43;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+header{
+    /* 상단 높이 */
+    height: 100px;
+    /* 상단 너비 */
+    width: 1000px;
+}
+
+/* .logo와 .menu를 묶어줌 */
+.top{
+    /* 상단 로고와 메뉴가 들어가는 곳 높이 */
+    height: 100px;
+    /* 상단 로고와 메뉴가 들어가는 곳 너비 */
+    width: 1000px;
+}
+
+/* 로고 영역 스타일 적용 */
+.logo{
+    float: left;
+    /* 로고 영역 높이 */
+    height: 100px;
+    /* 로고 영역 너비 */
+    width: 180px;
+}
+
+.logo img{
+    float: left;
+    height: 40px;
+    width: 150px;
+    margin-top: 30px;
+}
+
+.menu{
+    float: right;
+    height: 100px;
+    width: 800px;
+    z-index: 1;
+}
+
+.navi{
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.navi > li{
+    float: left;
+}
+
+.navi > li > a{
+    height: 40px;
+    width: 180px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #0066ad;
+    color: #ffffff;
+}
+
+.navi > li > a:hover{
+    background-color: #30a3f3;
+}
+
+.submenu{
+    width: 180px;
+    position: absolute;
+    display: none;
+    z-index: 10000;
+}
+
+.submenu > li > a{
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ababab;
+    color: #ffffff;
+}
+
+.submenu > li > a:hover{
+    background-color: #30a3f3;
+}
+
+/* .imgslide와 .contents 묶어줌 */
+.bodywrap{
+    /* .imgslide 높이 300px + .contents 높이 200px */
+    height: 510px;
+    /* .imgslide 너비, contents 너비; */
+    width: 1000px;
+}
+
+.imgslide{
+    /* 이미지 슬라이드 높이 */
+    height: 300px;
+    /* 이미지 슬라이드 너비 */
+    width: 1000px;
+    /* 이미지 슬라이드 영역 제한 */
+    position: relative;
+    /* 영역 밖으로 보이지 않도록 제한 */
+    overflow: hidden;
+}
+
+.imgslide > a{
+    display: block;
+    position: absolute;
+}
+
+.imgtext{
+    height: 50px;
+    width: 500px;
+    position: absolute;
+/* 박스 요소의 margin-top -25px, margin-right 0px, margin-bottom 0px, */
+/* margin-left -150px 여백을 의미함. position:absolute를 지정하였으므로 */
+/* 상위 컨테이너를 기준으로 절대 좌표값을 가짐. */
+/* 부모 요소에 position:relative를 주고 자식 요소에 position:absolute */
+/* 적용한 후 left:50%, top:50%, margin-top을 height값의 1/2 음수값(-값), */
+/* margin-left를 width의 1/2 음수값(-값)을 주면 수평, 수직으로 동시에 */
+/* 가운데 정렬을 할 수 있음 */
+    margin: -25px 0 0 -250px;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 50px;
+    background-color: rgba(40, 40, 40, 0.5);
+}
+
+/* location 코딩 시작 */
+
+.location{
+    width: 1000px;
+    margin: 0 auto;
+}
+.location_guide{
+    float: right;
+    color: #aaa;
+}
+.location_guide a{
+    display: inline-block;
+    margin: 0 4px;
+    color: #aaa;
+}
+.location::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+.location h1{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+
+.mapbox{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 40px;
+    border-top: 1px solid #000;
+    padding-top: 60px;
+}
+
+#map{
+    position: relative;
+    width:100%;
+    height:600px; 
+    border: 1px solid grey;
+}
+
+#mapinfo{
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+#mapinfo h3{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+}
+#mapinfo h4{
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: bold;
+    color: rgb(83, 83, 83);
+}
+
+.map2{
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.map2 p {
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+footer{
+    /* 하단 높이 */
+    height: 100px;
+    /* 하단 너비 */
+    width: 1000px;
+    background-color: #48487d;
+}
+.bt_logo{
+    float: left;
+    margin-left: 20px;
+    line-height: 158px;
+    
+}
+.bt_logo img{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.copy{
+    float: left;
+    /* Copyright 높이 */
+    height: 100px;
+    /* Copyright 너비 */
+    width: 410px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 100px;
+    color: #ffffff;
+}
+
+/* .btmenu와 .familysite 묶어줌 */
+.site{
+    float: right;
+    /* 하단 메뉴(.btmenu)와 패밀리 사이트(.familysite) 들어가는 곳 높이 */
+    height: 100px;
+    /* 하단 메뉴(.btmenu)와 패밀리 사이트(.familysite) 들어가는 곳 너비 */
+    width: 500px;
+}
+
+.btmenu{
+    float: right;
+    /* 하단 메뉴 높이(site 높이의 1/2) */
+    height: 50px;
+    /* 하단 메뉴 너비 */
+    width: 300px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.btmenu li > a{
+    float: left;
+    width: 100px;
+    display: inline;
+    color: #ffffff;
+}
+
+.btmenu li > a:hover{
+    font-weight: bold;
+}
+
+.familysite{
+    float: right;
+    /* 패밀리 사이트 높이(site 높이의 1/2) */
+    height: 50px;
+    /* 패밀리 사이트 너비 */
+    width: 300px;
+}
+
+.familysite select{
+    float: right;
+    height: 30px;
+    width: 280px;
+    margin-right: 10px;
+    font-size: 14px;
+}

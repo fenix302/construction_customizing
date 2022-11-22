@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0 auto;
+    background: #ffffff;
+}
+.logo{
+    margin: 10px 0 50px 105px;
+}
+.main_logo{
+    width: 300px;
+}
+#join {
+    width: 500px;
+    padding: 30px 30px 30px 30px;
+    margin: 0 auto;
+    border: 1px solid black
+}
+h3{
+    margin: 20px 0 10px 0;
+    font-size: 22px;
+}
+.input{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #dadada;
+    background: white;
+}
+#birth, #idCheck, #tel1{
+    height: 29px;
+    border: 1px solid #bebbbb;
+    cursor: pointer;
+}                
+#tel{
+    height: 29px;
+    border: 1px solid #bebbbb;
+}
+#postfind{
+    height: 29px;
+    border: 1px solid #bebbbb;
+    background: rgb(228, 222, 222);
+    cursor: pointer;
+}
+.address input{
+    margin-bottom: 5px;
+}
+.button_box{
+    margin: 50px 40px 0 0;
+    text-align: right;
+}
+.button{
+    width: 80px;
+    height: 35px;
+    background: rgba(128, 128, 128, 0.534);
+    border: 1px solid #757575;
+    cursor: pointer;
+}

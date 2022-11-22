@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남율건설 주택사업</title>
+    <link rel="stylesheet" href="css/style_business.css">
+    <script src="javascript/jquery-1.12.3.js"></script>
+
+    <!-- defer 속성은 script가 잠깐 지연 되도록 하여 -->
+    <!-- HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+</head>
+<body>
+    
+    <header>
+        <!-- .top은 .logo와 .menu를 묶어줌 -->
+        <div class="top">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <ul class="navi">
+                    <li>
+                        <a href="index_business1.html" class="scroll">주택사업</a>
+                    </li>
+                    <li>
+                        <a href="index_business2.html" class="scroll">건축사업</a>
+                    </li>
+                    <li>
+                        <a href="index_business3.html" class="scroll">인테리어</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- tubular 코딩 시작 -->
+    <div id="wrapper">
+        <a href="#" class="tubular-play">재생</a>
+        <a href="#" class="tubular-pause">일시정지</a>
+        <a href="#" class="tubular-volume-up">소리 키우기</a>
+        <a href="#" class="tubular-volume-down">소리 줄이기</a>
+        <a href="#" class="tubular-mute">소리 끄기</a>
+    </div>
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/jquery.tubular.1.0.js"></script>
+    <script>
+        $('document').ready(function() {
+	        var options = { videoId: 'R80y0NyMln4', mute:true };
+	        $('#wrapper').tubular(options);
+        	// f-UGhWj1xww cool sepia hd
+	        // 49SKbS7Xwf4 beautiful barn sepia
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>남율건설 오시는길</title>
+    <link rel="stylesheet" href="css/style_location.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="javascript/jquery-1.12.3.js"></script>
+    <script src="javascript/jquery.cookie.js"></script>
+    <script src="javascript/jquery.bxslider.min.js"></script>
+    <!-- defer 속성은 script가 잠깐 지연 되도록 하여 -->
+    <!-- HTML 구문 분석이 완료된 후 스크립트를 실행하도록 함 -->
+    <script src="javascript/script.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <!-- 레이어 팝업창 영역 -->
+    <div id="modal">
+        <div class="modal_up">
+            <div class="uptitle">
+                상반기 신입/경력 사원 채용 공고
+            </div>
+            <div class="upbody">
+                국내 최고의 건설회사로 발돋움하고 있는 남율건설에서는
+                열정을 가지고 진취적으로 도전하는 신입/경력 사원을 모집합니다.
+                남율건설과 함께 하실 역량있는 인재들의 많은 지원을 기다립니다.
+            </div>
+            <p class="closeWrap">
+                <input type="checkbox" name="expiresChk" id="expiresChk">
+                <label for="expiresChk">3일 동안 이 창 열지 않기</label>
+                <button class="btn">닫기</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+    <header>
+        <!-- .top은 .logo와 .menu를 묶어줌 -->
+        <div class="top">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="로고 이미지"></a>
+            </div>
+            <nav class="menu">
+                <ul class="navi">
+                    <li>
+                        <a href="#">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="index_about.html">비전</a></li>
+                            <li><a href="index_location.html">오시는길</a></li>
+                            <li><a href="index_join.html">회원가입</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#">사업영역</a>
+                    <ul class="submenu">
+                        <li><a href="#">주택사업</a></li>
+                        <li><a href="#">건축사업</a></li>
+                        <li><a href="#">인테리어</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="#">입주정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주캘린더</a></li>
+                            <li><a href="#">입주모임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul class="submenu">
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="#">기술교육</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- .bodywrap은 .imgslide와 .contents를 묶어줌 -->
+    <div class="bodywrap">
+        <div class="imgslide">
+            <a href="#">
+                <img src="images/img1.jpg" alt="이미지 1">
+                <span class="imgtext">모델하우스 VR 체험</span>
+            </a>
+            <a href="#">
+                <img src="images/img2.jpg" alt="이미지 2">
+                <span class="imgtext">건축과 인테리어</span>
+            </a>
+            <a href="#">
+                <img src="images/img3.jpg" alt="이미지 3">
+                <span class="imgtext">남율건설 인재 채용</span>
+            </a>
+        </div>
+
+
+        <!-- 오시는길 코딩 시작 -->
+        <div class="location">
+            <h1>오시는 길</h1>
+            <div class="location_guide">
+                <a href="#">HOME</a>
+                > 
+                <a href="#">회사소개</a>
+                >
+                <strong>오시는 길</strong>
+            </div>
+        </div>
+        <div class="mapbox">
+            <div id="mapinfo">
+                <h3>남율 건설</h3>
+                <h4>경기도 광명시 일직동 514, 302호</h4>
+            </div>
+            <div id="map">
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d900b751c324b497aa62a8afdf7c7088"></script>
+                <script>
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = {
+                        center: new kakao.maps.LatLng(37.42279, 126.88707), // 지도의 중심좌표
+                        level: 3, // 지도의 확대 레벨
+                        mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+                    }; 
+                
+                    // 지도를 생성한다 
+                    var map = new kakao.maps.Map(mapContainer, mapOption); 
+    
+                    // 로드뷰 타일 이미지 추가
+                    map.addOverlayMapTypeId(kakao.maps.MapTypeId.ROADVIEW); 
+                    
+                    // 지도 타입 변경 컨트롤을 생성한다
+                    var mapTypeControl = new kakao.maps.MapTypeControl();
+                    
+                    // 지도의 상단 우측에 지도 타입 변경 컨트롤을 추가한다
+                    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);	
+                    
+                    // 지도에 확대 축소 컨트롤을 생성한다
+                    var zoomControl = new kakao.maps.ZoomControl();
+    
+                    // 지도의 우측에 확대 축소 컨트롤을 추가한다
+                    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+                    
+                    // 지도에 마커를 생성하고 표시한다
+                    var marker = new kakao.maps.Marker({
+                        position: new kakao.maps.LatLng(37.42279, 126.88707), // 마커의 좌표
+                        map: map // 마커를 표시할 지도 객체
+                    });
+                </script>
+            <!-- Map API 적용 종료 -->
+            </div>
+            <div class="map2">
+                <h2>KTX, 지하철, 도보 이용 시</h2>
+                <p>광명역 1번출구 및 5번출구에서 코스트코 방향으로 약 700m 이내 (중앙대학교 광명병원 근접)</p>     
+            </div>
+            <div class="map2">
+                <h2>버스 이용 시</h2>
+                <p>22, 102, G9633, 3, 75, 1-3, 1-1  : 버스정류장 GIDC (제B2813-1호) 하차</p>     
+            </div>
+            <div class="map2">
+                <h2>자동차 이용 시</h2>
+                <p>서부 북부, 남부권 <br>
+                    성산대교 북단 → 서부간선지하도로 진입 → 금천IC (시흥대교 방면) → 금하지하차도(소하분기점 방면) → 우회전 → 기아자동차 방면 좌회전 → 소하지하차도 진입 → 덕안터널 진입 → 롯데아울렛 광명점 앞 좌회전 → GIDC (제B2813-1호)<br>
+                    경기 시흥, 안산권<br>
+                    서해안고속도로(서울, 성산대교 방면) → 광명역IC(광명역 방면) → 광명시청 경찰서 방면 좌회전 → 서울, 시흥대교, 소하OC 방면 우회전 → GIDC (제B2813-1호)<br>       
+                    경기 안양, 의왕권<br>
+                    제1순환고속도로(일산방면 진입) → 조남JC(성산대교, 목감 방면) → 광명역IC(광명역 방면) → 광명시청 경찰서 방면 좌회전 → 서울, 시흥대교, 소하OC 방면 우회전 → GIDC (제B2813-1호)
+                </p>     
+            </div>    
+
+
+
+    <footer>
+        <div class="bt_logo"><img src="images/NY_svg.svg" alt="bt로고"></div>
+        <div class="copy">
+            COPYRIGHT ©	by WEBDESIGN. ALL RIGHTS RESERVED
+        </div>
+        <div class="site">
+            <div class="btmenu">
+                <ul>
+                    <li><a href="index_about.html">회사소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+            <div class="familysite">
+                <select name="sitelist">
+                    <option value="#">패밀리사이트1</option>
+                    <option value="#">패밀리사이트2</option>
+                    <option value="#">패밀리사이트3</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

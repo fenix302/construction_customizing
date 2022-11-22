@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "GyeonggiBatang";
+    color: #333333;
+}
+
+body{
+    width: 100%;
+    background-color: #ffffff;
+    font-size: 20px;
+    /* border: 1px solid red; */
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    color: #30a3f3;
+}
+
+#wrapper{
+    top: 7%;
+    left: 37%;
+}
+#wrapper a{
+    margin: 10px 30px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+header{
+    position: fixed;
+    z-index: 5;
+    /* 상단 높이 */
+    height: 100px;
+    /* 상단 너비 */
+    width: 100%;
+    /* background: #fff; */
+}
+
+/* .logo와 .menu를 묶어줌 */
+.top{
+    /* 상단 로고와 메뉴가 들어가는 곳 높이 */
+    height: 100px;
+    /* 상단 로고와 메뉴가 들어가는 곳 너비 */
+    width: 1000px;
+    margin: 0 auto;
+    padding-left: 65px;
+}
+
+/* 로고 영역 스타일 적용 */
+.logo{
+    float: left;
+    /* 로고 영역 높이 */
+    height: 100px;
+    /* 로고 영역 너비 */
+    width: 180px;
+}
+
+.logo img{
+    float: left;
+    height: 50px;
+    width: 150px;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+.menu{
+    float: right;
+    height: 100px;
+    width: 800px;
+    z-index: 1;
+}
+
+.navi{
+    width: 750px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 30px;
+}
+
+.navi > li{
+    float: left;
+}
+
+.navi > li > a{
+    height: 50px;
+    width: 250px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0.7;
+    border-radius: 25px;
+    color: #0066ad;
+}
+
+.navi > li > a:hover{
+    background-color: #30a3f3;
+}
+
+.submenu{
+    width: 180px;
+    position: absolute;
+    display: none;
+    z-index: 10000;
+}
+
+.submenu > li > a{
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ababab;
+    color: #ffffff;
+}
+
+.submenu > li > a:hover{
+    background-color: #30a3f3;
+}
