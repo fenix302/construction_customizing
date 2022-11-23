@@ -193,6 +193,7 @@ h1{width: 1000px; margin: auto; display: flex; font-size: 45px; padding-top: 20p
 .content{
     background: #f5f5f5;
     padding: 50px;
+    border-radius: 10px;
 }
 .content2{
     color: #fff;

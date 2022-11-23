@@ -32,6 +32,7 @@ a{
 #wrapper{
     top: 7%;
     left: 37%;
+    width: 800px;
 }
 #wrapper a{
     margin: 10px 30px;
