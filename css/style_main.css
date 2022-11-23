@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'GyeonggiBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,7 +11,7 @@
     margin: 0 auto;
     padding: 0;
     list-style: none;
-    font-family: "GyeonggiBatang";
+    font-family: "GyeonggiTitleM";
     color: #333333;
 }
 
@@ -45,6 +45,7 @@ a{
 
 #modal.active{
     display: block;
+    z-index: 9999;
 }
 
 /* 레이어 팝업창 스타일 적용 */
@@ -55,6 +56,10 @@ a{
     left: 30%;
     top: 20%;
     background-color: #ffffff;
+    border: 15px double grey;
+}
+.bx-prev, .bx-next{
+    z-index: 1000 !important;
 }
 
 .uptitle{
@@ -198,6 +203,7 @@ header{
 .imgslide > a{
     display: block;
     position: absolute;
+    height: 300px;
 }
 
 .imgtext{
@@ -212,13 +218,13 @@ header{
 /* margin-left를 width의 1/2 음수값(-값)을 주면 수평, 수직으로 동시에 */
 /* 가운데 정렬을 할 수 있음 */
     margin: -25px 0 0 -250px;
-    left: 50%;
+    left: 48%;
     top: 50%;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
     line-height: 50px;
-    background-color: rgba(40, 40, 40, 0.5);
+    background-color: rgba(40, 40, 40, 0.7);
 }
 
 
@@ -232,8 +238,9 @@ header{
 .notice{
     float: left;
     height: 180px;
-    width: 390px;
+    width: 385px;
     margin-top: 10px;
+    border: 1px solid #fabd43;
 }
 
 .tab{
@@ -253,7 +260,7 @@ header{
 }
 
 .notice > div{
-    width: 390px;
+    width: 385px;
     border-bottom-color: #fabd43;
     border-bottom-width:2px;
     border-bottom-style:solid;
@@ -263,9 +270,13 @@ header{
 .notice li{
     float: left;
     height: 38px;
-    width: 390px;
+    width: 385px;
     line-height: 38px;
     font-size: 14px;
+}
+.notice li > a{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .notice li span{
@@ -289,6 +300,7 @@ header{
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    border: 1px solid #fabd43;
 }
 
 .gallery > div{
@@ -339,7 +351,7 @@ header{
     font-weight: bold;
     line-height: 30px;
     background-color: rgba(40, 40, 40, 0.5);
-    margin-top: 80px;
+    margin-top: 100px;
     margin-left: 50px;
 }
 

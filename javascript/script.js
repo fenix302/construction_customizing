@@ -15,23 +15,6 @@ jQuery(document).ready(function(){
         $(this).find('.submenu').stop().slideUp(500);
     });
 
-// .imgslide a:gt(0) : gt(index)은 index 값보다 더 큰 값(Greater)을
-// 가진 요소를 선택함. 0번째부터 계수하여 index 값보다 큰 값을 가져옴.
-// 여기서는 gt(0)이므로 1, 2, 3이 됨.
-    $('.imgslide a:gt(0)').hide();
-    // setInterval(function(){}), 3000 : 일정시간마다 반복적으로
-    // 동작을 실행하게 함. 3000은 3000ms(3초)는 3초마다 반복 실행함.
-     setInterval(function(){
-        // 가상클래스 선택자로 부모 요소가 가지고 있는 자식 요소 중 첫번째를
-        // 선택함. imgslide의 자식요소 <a>태그에서 첫번째 선택하여
-        // 페이드아웃을 실행함.
-        $('.imgslide a:first-child').fadeOut()
-        // 다음 태그를 선택하여 페이드인 실행함
-        .next('a').fadeIn()
-        // end() 메서드로 끝에다 appendTo() 함수 내용을 붙여줌
-        // 즉, 선택한 태그를 .imgslide 선택자 요소의 자식 요소로 추가해줌
-        .end().appendTo('.imgslide');}, 3000);
-
         // (".notice li:first").click : .notice 요소의 후손 요소
         // 중에서 첫 번째 요소를 클릭하면
         $(".notice li:first").click(function(){
@@ -62,9 +45,8 @@ jQuery(document).ready(function(){
     // .bodywrap에 박스슬라이더 적용
     $('.imgslide').bxSlider({
         auto: true,             //자동으로 애니메이션 시작
-        autoControls: true,     //시작 및 중지버튼 표시
-        speed:2000,              //애니메이션 전환 속도 설정 (500ms = 0.5s)
-        pause:1000,             // 애니메이션 유지 시간(1000ms = 1s)
+        speed:1000,              //애니메이션 전환 속도 설정 (500ms = 0.5s)
+        pause:5000,             // 애니메이션 유지 시간(1000ms = 1s)
         mode: 'fade',           //전환 모드 fade
         pager: false,           //페이지 안보이게 함
     });

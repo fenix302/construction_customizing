@@ -1,17 +1,17 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'GyeonggiBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
-    font-family: "GyeonggiBatang";
+    font-family: "GyeonggiTitleM";
     color: #333333;
 }
 
@@ -157,7 +157,7 @@ h1{width: 1000px; margin: auto; display: flex; font-size: 45px; padding-top: 20p
     background-image: url('../images/img1.jpg');
 }
 #ms2{
-    background-image: url('../images/img2.jpg');
+    background-image: url('../images/img4.jpg');
 }
 #ms3{
     background-image: url('../images/img3.jpg');
